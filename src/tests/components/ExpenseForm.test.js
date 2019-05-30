@@ -79,7 +79,6 @@ test('should set new date on date change', () => {
   const now = moment();
   const wrapper = shallow(<ExpenseForm />);
   wrapper.find('withStyles(SingleDatePicker)').prop('onDateChange')(now);
-  // wrapper.find({ onDateChange: now });
   expect(wrapper.state('createdAt')).toEqual(now);
 });
 
